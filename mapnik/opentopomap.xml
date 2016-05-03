@@ -85,8 +85,9 @@
 	zoom 0...8: #117803
 	zoom 9+: e0e0e0
 -->
-<Map background-color="#e0e0e0" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over" buffer-size="256">
+<Map background-color="rgba(255,255,255,0)" srs="&srs3857;">
 	<!-- style definitions -->
+	&fontset-settings;
 	&landuse-lowzoom;
 	&landuse;
 	&landuse-over-hillshade;
@@ -153,7 +154,9 @@
 	<!-- layers -->
 	
 	&basemap-relief;
+	&hillshade;
 	
+  <!--
 	<Layer name="landuse-lowzoom">
 		<StyleName>landuse-lowzoom</StyleName>
 		<Datasource>
@@ -172,7 +175,6 @@
 		</Datasource>
 	</Layer>
 	
-	&hillshade;
 	
 	<Layer name="landuse-over-hillshade">
 		<StyleName>landuse-over-hillshade</StyleName>
@@ -182,6 +184,7 @@
 			&postgis-settings;
 		</Datasource>
 	</Layer>
+  -->
 	
 	&basemap-sea;
 	
@@ -212,7 +215,7 @@
 		</Datasource>
 	</Layer>-->
 	
-	<Layer name="waterway-lines">
+  <Layer name="waterway-lines" >
 		<StyleName>waterway-lines</StyleName>
 		<Datasource>
 			<Parameter name="table">(SELECT way,"CEMT",intermittent,motorboat,tunnel,waterway FROM &prefix;_line) AS water </Parameter>
@@ -279,7 +282,9 @@
 		</Datasource>
 	</Layer>
 	
-	<Layer name="buildings">
+  <Layer name="buildings"
+         maximum-scale-denominator="&zoom11;"
+    >
 		<StyleName>buildings</StyleName>
 		<Datasource>
 			<Parameter name="table">(SELECT way,building,leisure,railway,amenity,aeroway FROM &prefix;_polygon WHERE (building IS NOT NULL AND building != 'no') OR (aeroway = 'terminal')) AS buildings </Parameter>
@@ -288,7 +293,9 @@
 		</Datasource>
 	</Layer>
 	
-	<Layer name="military">
+  <Layer name="military"
+         maximum-scale-denominator="&zoom11;"
+    >
 		<StyleName>military</StyleName>
 		<Datasource>
 			<Parameter name="table">(SELECT way,landuse FROM &prefix;_polygon WHERE (landuse = 'military')) AS landuse </Parameter>
@@ -317,7 +324,9 @@
 		</Datasource>
 	</Layer>
 	
-	<Layer name="borders">
+  <Layer name="borders"
+         maximum-scale-denominator="&zoom11;"
+    >
 		<StyleName>borders</StyleName>
 		<Datasource>
 			<Parameter name="table">(SELECT way,boundary,admin_level,name FROM &prefix;_line WHERE boundary IN ('administrative')) AS borders </Parameter>

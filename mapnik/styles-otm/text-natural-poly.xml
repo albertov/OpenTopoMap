@@ -13,7 +13,7 @@
 	</Rule>
 	<Rule>
 		&maxscale_zoom16;
-		&minscale_zoom17;
+		&minscale_zoom21;
 		<Filter>[natural] = 'water'</Filter>
 		<TextSymbolizer face-name="DejaVu Sans Oblique" size="10" fill="#2020ff" halo-radius="1" halo-fill="rgba(255,255,255,0.8)" placement="interior">[name]</TextSymbolizer>
 	</Rule>
