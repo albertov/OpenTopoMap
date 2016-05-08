@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map
+[
+  <!ENTITY basemap-relief SYSTEM "styles-otm/basemap-relief.xml">
+  <!ENTITY hillshade SYSTEM "styles-otm/hillshade.xml">
+	<!ENTITY % entities SYSTEM "inc/entities.xml.inc">
+	%entities;     
+]>
+
+<Map background-color="rgba(255,255,255,0)" srs="&srs3857;">
+	<!-- layers -->
+	
+	&basemap-relief;
+	&hillshade;
+	&contours;
+</Map>

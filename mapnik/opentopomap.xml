@@ -11,11 +11,11 @@
 -->
 <!DOCTYPE Map
 [
-<!--<!ENTITY basemap-relief SYSTEM "styles-otm/basemap-relief.xml"> FIXME -->
+  <!ENTITY basemap-relief SYSTEM "styles-otm/basemap-relief.xml">
 	<!ENTITY landuse-lowzoom SYSTEM "styles-otm/landuse-lowzoom.xml">
 	<!ENTITY landuse SYSTEM "styles-otm/landuse.xml">
 	<!ENTITY landuse-over-hillshade SYSTEM "styles-otm/landuse-over-hillshade.xml">
-  <!--<!ENTITY hillshade SYSTEM "styles-otm/hillshade.xml"> FIXME-->
+  <!ENTITY hillshade SYSTEM "styles-otm/hillshade.xml">
   <!--<!ENTITY basemap-sea SYSTEM "styles-otm/basemap-sea.xml"> FIXME -->
 	<!ENTITY water-casing-lowzoom SYSTEM "styles-otm/water-casing-lowzoom.xml">
 	<!ENTITY water-fill-lowzoom SYSTEM "styles-otm/water-fill-lowzoom.xml">
@@ -153,8 +153,6 @@
 
 	<!-- layers -->
 	
-	&basemap-relief;
-	&hillshade;
 	
   <!--
 	<Layer name="landuse-lowzoom">
@@ -304,16 +302,6 @@
 		</Datasource>
 	</Layer>
 
-  <!-- FIXME
-	<Layer name="contours">
-		<StyleName>contours</StyleName>
-		<Datasource>
-			<Parameter name="table">(SELECT way,height FROM contours) AS contours </Parameter>
-			<Parameter name="dbname">contours</Parameter>
-			&postgis-settings;
-		</Datasource>
-	</Layer>
-  -->
 	
 	<Layer name="borders-lowzoom">
 		<StyleName>borders-lowzoom</StyleName>

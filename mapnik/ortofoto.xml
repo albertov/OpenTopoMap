@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map
+[
+  <!ENTITY hillshade SYSTEM "styles-otm/hillshade.xml">
+	<!ENTITY contours SYSTEM "styles-otm/contours.xml">
+	<!ENTITY % entities SYSTEM "inc/entities.xml.inc">
+	%entities;     
+]>
+<Map background-color="rgba(255,255,255,0)" srs="&srs3857;">
+      <Style name="raster">
+        <Rule>
+          <RasterSymbolizer
+                opacity="1"
+                scaling="bilinear">
+            </RasterSymbolizer>
+        </Rule>
+    </Style>
+  <Layer name="GDAL Layer from TIFF file"
+    srs="+proj=utm +zone=30 +ellps=GRS80 +units=m +no_defs">
+    <StyleName>raster</StyleName>
+    <Datasource>
+        <Parameter name="type">gdal</Parameter>
+        <Parameter name="file">/Volumes/Sigym4/gisdata/ORTO_2014.ecw</Parameter>
+    </Datasource>
+  </Layer>
+	&hillshade;
+</Map>
+

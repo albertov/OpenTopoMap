@@ -5,11 +5,12 @@
 <!ENTITY srs900913 "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs +over">
 <!ENTITY srsmercator "+proj=merc +datum=WGS84 +over">
 <!ENTITY srs4326 "+init=epsg:4326">
-<!ENTITY srs3857 "+init=epsg:3857">
+<!ENTITY srs3857 "+init=EPSG:3857">
 
 <!ENTITY zoom0 "250000000000">
 <!ENTITY zoom9 "1500000">
 <!ENTITY zoom11 "400000">
+<!ENTITY zoom12 "200000">
 <!ENTITY zoom13 "100000">
 <!ENTITY maxscale_zoom0 "<MaxScaleDenominator>&zoom0;</MaxScaleDenominator>">
 <!ENTITY maxscale_zoom1 "<MaxScaleDenominator>500000000</MaxScaleDenominator>">
@@ -33,8 +34,8 @@
 <!ENTITY maxscale_zoom10 "<MaxScaleDenominator>750000</MaxScaleDenominator>">
 <!ENTITY minscale_zoom10 "<MinScaleDenominator>&zoom11;</MinScaleDenominator>">
 <!ENTITY maxscale_zoom11 "<MaxScaleDenominator>&zoom11;</MaxScaleDenominator>">
-<!ENTITY minscale_zoom11 "<MinScaleDenominator>200000</MinScaleDenominator>">
-<!ENTITY maxscale_zoom12 "<MaxScaleDenominator>200000</MaxScaleDenominator>">
+<!ENTITY minscale_zoom11 "<MinScaleDenominator>&zoom12;</MinScaleDenominator>">
+<!ENTITY maxscale_zoom12 "<MaxScaleDenominator>&zoom12;</MaxScaleDenominator>">
 <!ENTITY minscale_zoom12 "<MinScaleDenominator>&zoom13;</MinScaleDenominator>">
 <!ENTITY maxscale_zoom13 "<MaxScaleDenominator>&zoom13;</MaxScaleDenominator>">
 <!ENTITY minscale_zoom13 "<MinScaleDenominator>50000</MinScaleDenominator>">

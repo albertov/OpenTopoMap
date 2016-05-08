@@ -1,87 +1,140 @@
-<Style name="contours">
 	<!-- 100 m -->
 	<!--<Rule>
 		&maxscale_zoom10;
 		&minscale_zoom10;
-		<Filter>([height] % 100 = 0) and ([height] != 0)</Filter>
+		<Filter>([elevation] % 100 = 0) and ([elevation] != 0)</Filter>
 		<LineSymbolizer stroke="#d45500" stroke-width="0.1" />
 	</Rule>-->
+<Style name="contours-100">
 	<Rule>
 		&maxscale_zoom11;
 		&minscale_zoom11;
-		<Filter>([height] % 100 = 0) and ([height] != 0)</Filter>
+		<Filter>([elevation] % 100 = 0) and ([elevation] != 0)</Filter>
 		<LineSymbolizer stroke="#d45500" stroke-width="0.2" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom12;
 		&minscale_zoom12;
-		<Filter>([height] % 100 = 0) and ([height] != 0)</Filter>
+		<Filter>([elevation] % 100 = 0) and ([elevation] != 0)</Filter>
 		<LineSymbolizer stroke="#d45500" stroke-width="0.4" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom13;
-		<Filter>([height] % 100 = 0) and ([height] != 0)</Filter>
+		<Filter>([elevation] % 100 = 0) and ([elevation] != 0)</Filter>
 		<LineSymbolizer stroke="#d45500" stroke-width="0.5"  />
 	</Rule>
 	<Rule>
 		&maxscale_zoom14;
 		&minscale_zoom21;
-		<Filter>([height] % 100 = 0) and ([height] != 0)</Filter>
+		<Filter>([elevation] % 100 = 0) and ([elevation] != 0)</Filter>
 		<LineSymbolizer stroke="#d45500" stroke-width="0.6" smooth="0.5" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom11;
 		&minscale_zoom14;
-		<Filter>([height] % 100 = 0) and ([height] != 0)</Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" size="7" fill="#bc7e55" halo-radius="1" halo-fill="rgba(255,255,255,1)" halo-comp-op="soft-light" placement="line" max-char-angle-delta="10" label-position-tolerance="100" minimum-path-length="200" spacing="200">[height]</TextSymbolizer>
+		<Filter>([elevation] % 100 = 0) and ([elevation] != 0)</Filter>
+		<TextSymbolizer face-name="DejaVu Sans Book" size="7" fill="#bc7e55" halo-radius="1" halo-fill="rgba(255,255,255,1)" halo-comp-op="soft-light" placement="line" max-char-angle-delta="10" label-position-tolerance="100" minimum-path-length="200" spacing="200">[elevation]</TextSymbolizer>
 	</Rule>
+</Style>
 
 	<!-- 50 m -->
+<Style name="contours-50">
 	 <Rule>
 		&maxscale_zoom11;
 		&minscale_zoom11;
-		<Filter>([height] % 100 != 0) and ([height] % 50 = 0) and ([height] != 0)</Filter>
+		<Filter>([elevation] % 100 != 0) and ([elevation] % 50 = 0) and ([elevation] != 0)</Filter>
 		<LineSymbolizer stroke="#d45500" stroke-width="0.2" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom13;
-		<Filter>([height] % 100 != 0) and ([height] % 50 = 0) and ([height] != 0)</Filter>
+		<Filter>([elevation] % 100 != 0) and ([elevation] % 50 = 0) and ([elevation] != 0)</Filter>
 		<LineSymbolizer stroke="#d45500" stroke-width="0.3"  />
 	</Rule>
 	<Rule>
 		&maxscale_zoom14;
 		&minscale_zoom21;
-		<Filter>([height] % 100 != 0) and ([height] % 50 = 0) and ([height] != 0)</Filter>
+		<Filter>([elevation] % 100 != 0) and ([elevation] % 50 = 0) and ([elevation] != 0)</Filter>
 		<LineSymbolizer stroke="#d45500" stroke-width="0.4" smooth="0.5" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom14;
 		&minscale_zoom14;
-		<Filter>([height] % 100 != 0) and ([height] % 50 = 0) and ([height] != 0)</Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" size="7" fill="#bc7e55" halo-radius="1" halo-fill="rgba(255,255,255,0.8)" halo-comp-op="soft-light" placement="line" max-char-angle-delta="10" label-position-tolerance="100" minimum-path-length="200" spacing="200">[height]</TextSymbolizer>
+		<Filter>([elevation] % 100 != 0) and ([elevation] % 50 = 0) and ([elevation] != 0)</Filter>
+		<TextSymbolizer face-name="DejaVu Sans Book" size="7" fill="#bc7e55" halo-radius="1" halo-fill="rgba(255,255,255,0.8)" halo-comp-op="soft-light" placement="line" max-char-angle-delta="10" label-position-tolerance="100" minimum-path-length="200" spacing="200">[elevation]</TextSymbolizer>
 	</Rule>
+</Style>
 
 	<!-- 20 m -->
+<Style name="contours-20">
 	 <Rule>
 		&maxscale_zoom12;
 		&minscale_zoom12;
-		<Filter>([height] % 100 != 0) and ([height] % 20 = 0) and ([height] != 0)</Filter>
+		<Filter>([elevation] % 100 != 0) and ([elevation] % 20 = 0) and ([elevation] != 0)</Filter>
 		<LineSymbolizer stroke="#d45500" stroke-width="0.2"  smooth="0.5" />
 	</Rule>
+</Style>
 
 	<!-- 10 m -->
+<Style name="contours-10">
 	<Rule>
 		&maxscale_zoom13;
 		&minscale_zoom21;
-		<Filter>([height] % 50 != 0) and ([height] % 10 = 0) and ([height] != 0)</Filter>
+		<Filter>([elevation] % 50 != 0) and ([elevation] % 10 = 0) and ([elevation] != 0)</Filter>
 		<LineSymbolizer stroke="#d45500" stroke-width="0.2" smooth="0.5" />
 	</Rule>
 	<Rule>
 		&maxscale_zoom15;
 		&minscale_zoom21;
-		<Filter>([height] % 10 = 0) and ([height] != 0)</Filter>
-		<TextSymbolizer face-name="DejaVu Sans Book" size="7" fill="#bc7e55" halo-radius="1" halo-fill="rgba(255,255,255,0.3)" placement="line" max-char-angle-delta="10" label-position-tolerance="100" minimum-path-length="300" spacing="800">[height]</TextSymbolizer>
+		<Filter>([elevation] % 10 = 0) and ([elevation] != 0)</Filter>
+		<TextSymbolizer face-name="DejaVu Sans Book" size="7" fill="#bc7e55" halo-radius="1" halo-fill="rgba(255,255,255,0.3)" placement="line" max-char-angle-delta="10" label-position-tolerance="100" minimum-path-length="300" spacing="800">[elevation]</TextSymbolizer>
 	</Rule>
 </Style>
+
+  <Layer name="contours-low" srs="&srs3857;"
+    cache-features="on"
+    maximum-scale-denominator="&zoom11;"
+     minimum-scale-denominator="&zoom11;"
+     >
+		<StyleName>contours-100</StyleName>
+		<StyleName>contours-50</StyleName>
+		<Datasource>
+			<Parameter name="table">(SELECT geom,elevation FROM madrid_contour2 WHERE elevation%50 = 0) as contours_low</Parameter>
+			<Parameter name="dbname">osm</Parameter>
+			&postgis-settings;
+			<Parameter name="extimate_extent">false</Parameter>
+      <Parameter name="extent">-511763,4846495,-336240,5037291</Parameter>
+		</Datasource>
+	</Layer>
+
+  <Layer name="contours-med" srs="&srs3857;"
+    cache-features="on"
+    maximum-scale-denominator="&zoom12;"
+    minimum-scale-denominator="&zoom12;"
+    >
+		<StyleName>contours-20</StyleName>
+		<Datasource>
+			<Parameter name="table">(SELECT geom,elevation FROM madrid_contour2 WHERE elevation%50 = 0) as contours_med</Parameter>
+			<Parameter name="dbname">osm</Parameter>
+			&postgis-settings;
+			<Parameter name="extimate_extent">false</Parameter>
+      <Parameter name="extent">-511763,4846495,-336240,5037291</Parameter>
+		</Datasource>
+	</Layer>
+
+  <Layer name="contours-hi" srs="&srs3857;"
+    cache-features="on"
+    maximum-scale-denominator="&zoom13;"
+    >
+		<StyleName>contours-10</StyleName>
+		<StyleName>contours-50</StyleName>
+		<StyleName>contours-100</StyleName>
+		<Datasource>
+			<Parameter name="table">madrid_contour2</Parameter>
+			<Parameter name="dbname">osm</Parameter>
+			&postgis-settings;
+			<Parameter name="extimate_extent">false</Parameter>
+      <Parameter name="extent">-511763,4846495,-336240,5037291</Parameter>
+		</Datasource>
+	</Layer>
